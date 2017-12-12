@@ -150,7 +150,7 @@ function init(){
 }
 
 function updateData(){
-    d3.csv("../data/bfdi.csv",function(d){
+    d3.csv("data/bfdi.csv",function(d){
         var svgWidth = document.getElementById("main").clientWidth;
         var rows = d.length;
         var cols = Object.keys(d[0]).length;
