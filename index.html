@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>D3</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="controlpanel" class="col-sm-12 col-sm-12 col-md-4 col-lg-4 col-md-push-8 col-lg-push-8">
+                <h1>BFDI Votes</h1>
+                <div id="controls" class="closed">
+                    <hr>
+                    <p>
+                        Created by KatYJ.<br>
+                        This is an interactive graph showing the votes received for each character in each episode from the first season of the online web series "Battle for Dream Island".<br>
+                        Please support the original show by going <a href="https://www.youtube.com/playlist?list=PL24C8378F296DB656">here</a>.
+                    </p>
+                    <h3>Zoom</h3>
+                    <select id="heightMultiplierControl" class="form-control" onchange="heightChange()">
+                        <option value="0.5">0.5x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="2">2x</option>
+                        <option value="4">4x</option>
+                        <option value="8">8x</option>
+                    </select>
+                    <h3>Characters</h3>
+                    <a class="btn btn-default" onclick="selectAll(true)">Select All</a>
+                    <a class="btn btn-default" onclick="selectAll(false)">Deselect All</a><br>
+                </div>
+                <div id="expander" class="circle-btn" onclick="toggleControls()">
+                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                </div>
+                <br>
+            </div>
+            <div id="mainpanel" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <svg id="main" text-anchor="middle"></svg>
+                
+            </div>
+        </div>
+    </div>
+    <div id="tooltip"></div>
+    <script src="js/d3.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
