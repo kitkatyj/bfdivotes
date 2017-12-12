@@ -39,7 +39,7 @@ function init(){
         controls.style("max-height","none");
     }
 
-    d3.csv("data/bfdi.csv",function(d){
+    d3.csv("bfdivotes/data/bfdi.csv",function(d){
         var svgWidth = document.getElementById("main").clientWidth;
         var rows = d.length;
         var cols = Object.keys(d[0]).length;
